@@ -1,10 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import Card from '../components/Card/Card';
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Card icon="credit-card-outline" name="Cartões" />
+      <Card icon="chart-line-variant" name="Investir" />
+      <Card icon="bank-transfer" name="Transferir" />
     </View>
   );
 };
@@ -12,9 +15,10 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
   },
 });
 
