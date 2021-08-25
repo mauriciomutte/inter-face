@@ -1,13 +1,17 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Card from '../components/Card/Card';
+import Header from '../components/Header/Header';
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Card icon="credit-card-outline" name="Cartões" />
-      <Card icon="chart-line-variant" name="Investir" />
-      <Card icon="bank-transfer" name="Transferir" />
+      <Header />
+      <View style={styles.cards}>
+        <Card icon="credit-card-outline" name="Cartões" />
+        <Card icon="chart-line-variant" name="Investir" />
+        <Card icon="bank-transfer" name="Transferir" />
+      </View>
     </View>
   );
 };
@@ -15,8 +19,11 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 25,
+  },
+  cards: {
+    flex: 1,
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
     marginHorizontal: 20,
   },
